@@ -1,0 +1,222 @@
+@import url("reset.css");
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(21, 52, 22, 1);
+    background: linear-gradient(rgba(22, 21, 21, 0.5), rgba(22, 21, 21, 0.5)), url('../images/background_main.svg') no-repeat center/cover;
+}
+
+.wrapper {
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.inner {
+    max-width: 496px;
+    height: 100%;
+    margin-left: auto;
+    background: rgba(233, 233, 233, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+.container {
+    width: 340px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.slider {
+    padding: 60px 0;
+    display: inline-block;
+    position: relative;
+}
+
+.slider-input {
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.slider-label {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+    height: 36px;
+    border-radius: 30px;
+    background: transparent;
+    border: 1px solid rgba(21, 52, 22, 1);
+}
+
+.slider-label::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 168px;
+    height: 32px;
+    background-color: rgba(21, 52, 22, 1);
+    border-radius: 30px;
+    transition: all 0.4s linear;
+}
+
+.slider-input:checked+.slider-label::before {
+    transform: translate(100%);
+}
+
+.slider-span {
+    z-index: 2;
+    display: flex;
+    flex: 1 1 50%;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    line-height: 14.06px;
+}
+
+.title {
+    padding-top: 75px;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.forms {
+    margin-top: 30px;
+}
+
+label {
+    cursor: pointer;
+}
+
+.checkbox-input{
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.checkbox-label {
+    position: relative;
+    padding: 5px 5px 5px 30px;
+    display: inline-block;
+    color: #ffffff;
+}
+
+.checkbox-label::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgba(217, 217, 217, 1);
+    border-radius: 2px;
+}
+
+.checkbox-input:checked+.checkbox-label::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 6px;
+    height: 12px;
+    border-bottom: 1px solid rgba(217, 217, 217, 1);
+    border-right: 1px solid rgba(217, 217, 217, 1);
+    transform: rotate(40deg);
+}
+
+.checkbox-input:checked+.checkbox-label::before {
+    background: rgba(21, 52, 22, 1);
+    border-color: rgba(21, 52, 22, 1);
+}
+
+.checkbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox .forgot-pw {
+    margin-left: auto;
+    color: rgba(21, 52, 22, 1);
+}
+
+.forms input[type="email"],
+.forms input[type="password"] {
+    width: 100%;
+    height: 44px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: 1px solid rgba(146, 145, 145, 1);
+    background: rgba(146, 145, 145, 1);
+
+}
+
+.forms input[type="submit"] {
+    width: 100%;
+    height: 44px;
+    margin-bottom: 44px;
+    margin-top: 30px;
+    border-radius: 30px;
+    border: 1px solid rgba(21, 52, 22, 1);
+    background: rgba(21, 52, 22, 1);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: #ffffff;
+}
+
+.no_account {
+    width: 237px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.no_account-link {
+    color: #ffffff;
+}
+
+.container-references {
+    padding-top: 48px;
+}
+
+.references {
+    display: flex;
+    gap: 15px;
+    width: 102px;
+    margin: 0 auto;
+    padding: 24px 0 60px;
+}
+
+.references-text {
+    text-align: center;
+}
+
+.reference {
+    flex: 1 1 30%;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: rgba(21, 52, 22, 1);
+}
+
+.reference-icon {
+    height: 24px;
+    width: 24px;
+}
